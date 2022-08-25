@@ -1,0 +1,35 @@
+<!-- home.handlebars -->
+<div>
+<img src="../assets/barges.jpg" class="img-fluid" alt="Barges">
+</div>
+      <div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Search by Counterparty</h5>
+        <p class="card-text"> Phillips 66, BP, Global, GEW, ATMI, Koch</p>
+        <form action=/search/counterparty class="search-form">
+        <input type='search' name='counterparty_name' placeholder="counterparty">
+        <input type="submit" value= "Search" class="btn btn-primary">
+    </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Search by Inspector</h5>
+        <p class="card-text"> AmSpec, Inspectorate, Camin, Intertek, NMK</p>
+        <form action=/search/inspector class="search-form">
+<input type='search' name='inspector' placeholder="Inspector">
+<input type="submit" value= "Search" class="btn btn-primary">
+</form>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="/javascript/home-routes.js"></script>
+
