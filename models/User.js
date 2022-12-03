@@ -35,6 +35,14 @@ User.init(
     role: {
       type: DataTypes.STRING,
       allowNull: false,
+    },   
+    company: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    }, 
+    admin: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
     },
     email: {
       type: DataTypes.STRING,

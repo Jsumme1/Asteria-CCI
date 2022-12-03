@@ -32,6 +32,10 @@ Comment.init(
         key: "id",
       },
     },
+    datetime: {
+      type: DataTypes.Datetime,
+      allowNull: false,
+    },
   },
   {
     sequelize,
