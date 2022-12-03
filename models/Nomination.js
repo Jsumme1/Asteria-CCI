@@ -102,7 +102,7 @@ Nomination.init(
     },
 
     internal: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BOOLEAN,
       allowNull: false,
     },
     datetime_submission: {
