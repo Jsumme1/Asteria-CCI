@@ -41,7 +41,7 @@ User.init(
       allowNull: false,
     }, 
     admin: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BOOLEAN,
       allowNull: false,
     },
     email: {
