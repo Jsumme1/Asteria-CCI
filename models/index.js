@@ -3,6 +3,7 @@ const Nomination = require("./Nomination");
 const User = require("./User");
 const Comment = require("./Comment");
 const Connector = require("./Connector");
+const Product = require("./Product");
 
 // create associations
 // create associations
@@ -58,6 +59,11 @@ Comment.belongsTo(Nomination, {
   onDelete: 'SET NULL'
 });
 
+Product.belongsTo(Nomination, {
+  foreignKey: 'nomination_id',
+  onDelete: 'SET NULL'
+});
+
 User.hasMany(Comment, {
   foreignKey: 'user_id',
   onDelete: 'SET NULL'
@@ -67,4 +73,4 @@ Nomination.hasMany(Comment, {
   foreignKey: 'nomination_id'
 });
 
-module.exports = { User, Nomination, Connector, Comment };
+module.exports = { User, Nomination, Connector, Comment, Product };
