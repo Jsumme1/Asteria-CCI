@@ -4,6 +4,10 @@ const User = require("./User");
 const Comment = require("./Comment");
 const Connector = require("./Connector");
 const Product = require("./Product");
+const Terminal_business = require("./Terminal_business");
+const Customer_business = require("./Customer_business");
+const Terminal_product = require("./Terminal_product");
+const Customer_terminal = require("./Customer_terminal");
 
 // create associations
 // create associations
@@ -63,7 +67,10 @@ Product.belongsTo(Nomination, {
   foreignKey: 'nomination_id',
   onDelete: 'SET NULL'
 });
-
+Terminal_product.belongsTo(Customer_terminal, {
+  foreignKey: 'terminal_business_id',
+  onDelete: 'SET NULL'
+});
 User.hasMany(Comment, {
   foreignKey: 'user_id',
   onDelete: 'SET NULL'
