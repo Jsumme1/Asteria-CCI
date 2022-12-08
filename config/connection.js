@@ -12,4 +12,18 @@ const sequelize = process.env.JAWSDB_URL
       },
     });
 
+/*
+const Sequelize = require("sequelize");
+const sequelize = new Sequelize(
+ 'root',
+ 'FeatherLight369',
+  {
+    host: 'localhost'
+    dialect: 'mysql',
+    dialectOptions: {
+      decimalNumbers: true,
+    },
+  }
+);
+*/
 module.exports = sequelize;
