@@ -67,10 +67,10 @@ Product.belongsTo(Nomination, {
   foreignKey: 'nomination_id',
   onDelete: 'SET NULL'
 });
-Terminal_product.belongsTo(Customer_terminal, {
-  foreignKey: 'terminal_business_id',
-  onDelete: 'SET NULL'
-});
+//Terminal_product.belongsTo(Customer_terminal, {
+  //foreignKey: 'terminal_business_id',
+  //onDelete: 'SET NULL'
+//});
 User.hasMany(Comment, {
   foreignKey: 'user_id',
   onDelete: 'SET NULL'
