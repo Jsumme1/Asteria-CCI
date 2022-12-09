@@ -106,7 +106,7 @@ Nomination.init(
       allowNull: false,
     },
     datetime_submission: {
-      type: DataTypes.Datetime,
+      type: DataTypes.DATEONLY,
       allowNull: false,
     },
     terminal_company_id: {
