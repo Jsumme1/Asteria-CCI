@@ -4,8 +4,8 @@ const User = require("./User");
 const Comment = require("./Comment");
 const Connector = require("./Connector");
 const Product = require("./Product");
-const Terminal_business = require("./Terminal_business");
-const Customer_business = require("./Customer_business");
+//const Terminal_business = require("./Terminal_business");
+//const Customer_business = require("./Customer_business");
 const Terminal_product = require("./Terminal_product");
 const Customer_terminal = require("./Customer_terminal");
 
