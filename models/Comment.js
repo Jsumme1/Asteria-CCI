@@ -33,7 +33,7 @@ Comment.init(
       },
     },
     datetime: {
-      type: DataTypes.Datetime,
+      type: DataTypes.DATE,
       allowNull: false,
     },
   },
