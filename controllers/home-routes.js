@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ["id", "comment_text", "nomination_id", "user_id", "created_at", "datetime"],
+        attributes: ["id", "comment_text", "nomination_id", "user_id", "created_at"],
         include: {
           model: User,
           attributes: ["username"],
@@ -27,11 +27,11 @@ router.get("/", (req, res) => {
       console.log("callback initiated")
       const noms = dbNominationData.map((nom) => nom.get({ plain: true }));
 
-      /*res.render("homepage", {
+      res.render("homepage", {
         noms,
         loggedIn: req.session.loggedIn,
-      });*/
-      res.send('Hello World !')
+      });
+      //res.send('Hello World !')
     })
     .catch((err) => {
       console.log(err);
