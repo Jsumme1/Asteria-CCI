@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Sequelize } = require("sequelize/dist");
+const { Sequelize } = require("sequelize");
 const sequelize = require("../config/connection");
 const { Nomination, User, Comment } = require("../models");
 const Op = Sequelize.Op
@@ -7,10 +7,11 @@ const Op = Sequelize.Op
 router.get("/", (req, res) => {
   console.log("======================");
   Nomination.findAll({
+    subQuery: false,
     include: [
       {
         model: Comment,
-        attributes: ["id", "comment_text", "nomination_id", "user_id", "created_at"],
+        attributes: ["id", "comment_text", "nomination_id", "user_id", "created_at", "datetime"],
         include: {
           model: User,
           attributes: ["username"],
@@ -51,6 +52,7 @@ router.get("/nomination/:id", (req, res) => {
           "nomination_id",
           "user_id",
           "created_at",
+          "datetime",
         ],
         include: {
           model: User,

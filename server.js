@@ -42,3 +42,9 @@ app.use(require("./controllers/"));
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
+/*
+//Sets a basic route
+app.get('/', (req, res) => res.send('Hello World !'));
+
+//Makes the app listen to port 3000
+app.listen(PORT, () => console.log(`App listening to port ${PORT}`));*/
