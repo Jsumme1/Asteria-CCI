@@ -7,7 +7,7 @@ const Op = Sequelize.Op
 router.get("/", (req, res) => {
   console.log("======================");
   Nomination.findAll({
-    subQuery: false,
+    //subQuery: false,
     include: [
       {
         model: Comment,
@@ -24,12 +24,14 @@ router.get("/", (req, res) => {
     ],
   })
     .then((dbNominationData) => {
+      console.log("callback initiated")
       const noms = dbNominationData.map((nom) => nom.get({ plain: true }));
 
-      res.render("homepage", {
+      /*res.render("homepage", {
         noms,
         loggedIn: req.session.loggedIn,
-      });
+      });*/
+      res.send('Hello World !')
     })
     .catch((err) => {
       console.log(err);

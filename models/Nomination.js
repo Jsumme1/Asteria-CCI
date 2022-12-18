@@ -11,6 +11,7 @@ Nomination.init(
       primaryKey: true,
       autoIncrement: true,
     },
+
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -68,10 +69,12 @@ Nomination.init(
         len: [5],
       },
     },
+/*
     status: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+
     move_type: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -112,7 +115,7 @@ Nomination.init(
     terminal_company_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-    },
+    },*/
   },
 
   {
