@@ -13,12 +13,10 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Jsumme1/barge-nomination/issues"
+    "url": "https://github.com/Jsumme1/Asteria-CCI/issues"
   },
-  "homepage": "https://github.com/Jsumme1/barge-nomination#readme",
-  "dependencies": {
+  "homepage": "https://github.com/Jsumme1/barge-nomination#readmehttps://github.com/Jsumme1/Asteria-CCI/blob/main/README.md": {
     "@handlebars/allow-prototype-access": "^1.0.5",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.2",

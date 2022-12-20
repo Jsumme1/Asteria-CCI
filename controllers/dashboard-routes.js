@@ -6,6 +6,7 @@ const withAuth = require('../utils/auth');
 router.get('/', withAuth, (req, res) => {
   console.log(req.session);
   console.log('======================');
+  console.log("About to find all from dashboard routes.")
   Nomination.findAll({
     /*where: {
       user_id: req.session.user_id

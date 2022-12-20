@@ -8,7 +8,8 @@ router.get("/", (req, res) => {
   console.log("======================");
   Nomination.findAll({
     //subQuery: false,
-    include: [
+    // console.log("Finding all..");
+   /*include: [
       {
         model: Comment,
         attributes: ["id", "comment_text", "nomination_id", "user_id", "created_at"],
@@ -21,7 +22,7 @@ router.get("/", (req, res) => {
         model: User,
         attributes: ["username"],
       },
-    ],
+    ],*/
   })
     .then((dbNominationData) => {
       console.log("callback initiated")
@@ -34,6 +35,7 @@ router.get("/", (req, res) => {
       //res.send('Hello World !')
     })
     .catch((err) => {
+      console.log("Error catch triggered from home routes")
       console.log(err);
       res.status(500).json(err);
     });
