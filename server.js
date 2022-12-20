@@ -43,6 +43,7 @@ app.use(require("./controllers/"));
 console.log("About to sync sequelize.")
 
 sequelize.sync({ force: false }).then(() => {
+  console.log("In sequelize sync")
   app.listen(PORT, () => console.log("Now listening"));
 });
 /*
