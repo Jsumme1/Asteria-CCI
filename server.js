@@ -24,7 +24,6 @@ const helpers = require("./utils/helpers");
 
 const hbs = exphbs.create({ helpers });
 // Set Handlebars as the default template engine.
-console.log("Setting Handlebars as default")
 app.engine("handlebars", hbs.engine);
 
 
@@ -40,15 +39,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(require("./controllers/"));
 
-console.log("About to sync sequelize.")
 
 sequelize.sync({ force: false }).then(() => {
-  console.log("In sequelize sync")
   app.listen(PORT, () => console.log("Now listening"));
 });
-/*
-//Sets a basic route
-app.get('/', (req, res) => res.send('Hello World !'));
-
-//Makes the app listen to port 3000
-app.listen(PORT, () => console.log(`App listening to port ${PORT}`));*/

@@ -7,9 +7,7 @@ const Op = Sequelize.Op
 router.get("/", (req, res) => {
   console.log("======================");
   Nomination.findAll({
-    //subQuery: false,
-    // console.log("Finding all..");
-   /*include: [
+   include: [
       {
         model: Comment,
         attributes: ["id", "comment_text", "nomination_id", "user_id", "created_at"],
@@ -22,7 +20,7 @@ router.get("/", (req, res) => {
         model: User,
         attributes: ["username"],
       },
-    ],*/
+    ],
   })
     .then((dbNominationData) => {
       console.log("callback initiated")
@@ -32,7 +30,7 @@ router.get("/", (req, res) => {
         noms,
         loggedIn: req.session.loggedIn,
       });
-      //res.send('Hello World !')
+      
     })
     .catch((err) => {
       console.log("Error catch triggered from home routes")

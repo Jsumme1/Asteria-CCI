@@ -31,11 +31,11 @@ Comment.init(
         model: "nomination",
         key: "id",
       },
-    },/*
+    },
     datetime: {
       type: DataTypes.DATE,
       allowNull: false,
-    },*/
+    },
   },
   {
     sequelize,

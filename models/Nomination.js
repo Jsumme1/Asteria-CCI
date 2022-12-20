@@ -72,10 +72,6 @@ Nomination.init(
 
     status: {
       type: DataTypes.STRING,
-    }
-/*
-    status: {
-      type: DataTypes.STRING,
       //allowNull: false,
     },
 
@@ -119,7 +115,7 @@ Nomination.init(
     terminal_company_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-    },*/
+    },
   },
 
   {
