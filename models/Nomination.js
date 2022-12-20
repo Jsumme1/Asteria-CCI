@@ -69,10 +69,14 @@ Nomination.init(
         len: [5],
       },
     },
+
+    status: {
+      type: DataTypes.STRING,
+    }
 /*
     status: {
       type: DataTypes.STRING,
-      allowNull: false,
+      //allowNull: false,
     },
 
     move_type: {
