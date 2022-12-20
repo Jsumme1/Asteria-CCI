@@ -27,4 +27,5 @@ const sequelize = new Sequelize(
   }
 );
 */
+console.log("In connections.js")
 module.exports = sequelize;
