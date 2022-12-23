@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Sequelize } = require("sequelize/dist");
+const { Sequelize } = require("sequelize");
 const sequelize = require("../config/connection");
 const { Nomination, User, Comment } = require("../models");
 const Op = Sequelize.Op
@@ -7,7 +7,7 @@ const Op = Sequelize.Op
 router.get("/", (req, res) => {
   console.log("======================");
   Nomination.findAll({
-    include: [
+   include: [
       {
         model: Comment,
         attributes: ["id", "comment_text", "nomination_id", "user_id", "created_at"],
@@ -23,12 +23,14 @@ router.get("/", (req, res) => {
     ],
   })
     .then((dbNominationData) => {
+      console.log("callback initiated")
       const noms = dbNominationData.map((nom) => nom.get({ plain: true }));
 
       res.render("homepage", {
         noms,
         loggedIn: req.session.loggedIn,
       });
+      
     })
     .catch((err) => {
       console.log(err);
@@ -51,6 +53,7 @@ router.get("/nomination/:id", (req, res) => {
           "nomination_id",
           "user_id",
           "created_at",
+          "datetime",
         ],
         include: {
           model: User,

@@ -11,6 +11,7 @@ Nomination.init(
       primaryKey: true,
       autoIncrement: true,
     },
+
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -68,50 +69,49 @@ Nomination.init(
         len: [5],
       },
     },
+
     status: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
+
     move_type: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
+
     eta: {
       type: DataTypes.DATEONLY,
-      allowNull: false,
     },
+
     recieving_tank: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
+
     discharge_tank: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
+
     inspection_split: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
+
     customer_reference_number: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
+
     terminal_reference_number: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
 
     internal: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
     },
+
     datetime_submission: {
-      type: DataTypes.Datetime,
-      allowNull: false,
+      type: DataTypes.DATE,
     },
+    
     terminal_company_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
     },
   },
 

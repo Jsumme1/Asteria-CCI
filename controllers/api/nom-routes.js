@@ -5,6 +5,7 @@ const withAuth = require("../../utils/auth");
 // get all nominations
 router.get("/", (req, res) => {
   console.log("======================");
+  console.log("About to find all from nom-routes");
   Nomination.findAll({
     include: [
       {
