@@ -33,7 +33,6 @@ router.get("/", (req, res) => {
       
     })
     .catch((err) => {
-      console.log("Error catch triggered from home routes")
       console.log(err);
       res.status(500).json(err);
     });
