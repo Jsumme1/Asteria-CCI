@@ -11,6 +11,7 @@ Comment.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    
     comment_text: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -18,6 +19,7 @@ Comment.init(
         len: [1],
       },
     },
+
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -25,6 +27,7 @@ Comment.init(
         key: "id",
       },
     },
+
     nonmination_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -32,9 +35,9 @@ Comment.init(
         key: "id",
       },
     },
+
     datetime: {
       type: DataTypes.DATE,
-      allowNull: false,
     },
   },
   {

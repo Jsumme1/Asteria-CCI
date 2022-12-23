@@ -38,11 +38,9 @@ User.init(
     },   
     company: {
       type: DataTypes.INTEGER,
-      allowNull: false,
     }, 
     admin: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
     },
     email: {
       type: DataTypes.STRING,
