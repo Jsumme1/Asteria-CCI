@@ -20,28 +20,35 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    
     username: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-     firstname: {
+    
+    firstname: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    
     lastname: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    
     role: {
       type: DataTypes.STRING,
       allowNull: false,
-    },   
+    },  
+    
     company: {
       type: DataTypes.INTEGER,
     }, 
+    
     admin: {
       type: DataTypes.BOOLEAN,
     },
+    
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -50,6 +57,7 @@ User.init(
         isEmail: true,
       },
     },
+    
     password: {
       type: DataTypes.STRING,
       allowNull: false,
